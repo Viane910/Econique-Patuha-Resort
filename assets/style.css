@@ -818,8 +818,8 @@ li {
 .contact {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
-  justify-content: center;
+  gap: 2rem;
+  justify-content: space-between;
   align-items: flex-start;
 }
 .contact-info {
@@ -831,6 +831,16 @@ li {
   line-height: 1.7;
   padding: 0 10px;
 }
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
 .contact-info a {
   color: #537d5d;
   text-decoration: underline;
@@ -845,6 +855,7 @@ li {
   max-width: 420px;
   padding: 0 10px;
 }
+/* Responsif */
 @media (max-width: 800px) {
   .contact {
     flex-direction: column;
@@ -853,9 +864,11 @@ li {
   }
   .contact-map {
     width: 100%;
-    max-width: 100vw;
-    min-width: 0;
+    max-width: 100%;
     padding: 0;
+  }
+  .contact-map iframe {
+    height: 280px; /* lebih pas di mobile */
   }
   .contact-info {
     text-align: center;
